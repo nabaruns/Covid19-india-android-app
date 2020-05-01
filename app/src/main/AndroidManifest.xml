@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nabarunsarkar.safe19india">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.nabarunsarkar.safe19india.Safe19IndiaApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.nabarunsarkar.safe19india.ui.main.DisplayFaqActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.DisplayAppsActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.DisplayEssentialsActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.AboutActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.DisplayDistrictActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.DisplayStateActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.DisplayStateActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.DisplayStateActivity"
+            android:parentActivityName="com.nabarunsarkar.safe19india.ui.main.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nabarunsarkar.safe19india.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.nabarunsarkar.safe19india.ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

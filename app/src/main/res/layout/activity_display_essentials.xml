@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    tools:context=".ui.main.DisplayEssentialsActivity"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:padding="@dimen/dimen_8"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/simple_header" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dynamic_list_header" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout03"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <Spinner
+                    android:id="@+id/state_spinner"
+                    style="@style/spinner_style"
+                    android:layout_weight="1"
+                    android:prompt="@string/spinner_prompt"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+
+                <Spinner
+                    android:id="@+id/city_spinner"
+                    style="@style/spinner_style"
+                    android:layout_weight="1"
+                    android:prompt="@string/spinner_prompt"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+            </LinearLayout>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/simple_header" />-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/state_spinner"-->
+<!--                style="@style/spinner_style"-->
+<!--                android:prompt="@string/spinner_prompt"-->
+<!--                tools:listitem="@android:layout/simple_spinner_item" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:text="@string/dynamic_list_header" />-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/city_spinner"-->
+<!--                style="@style/spinner_style"-->
+<!--                android:prompt="@string/spinner_prompt"-->
+<!--                tools:listitem="@android:layout/simple_spinner_item" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/selection_header" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout04"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    style="@style/spinner_style"
+                    android:layout_weight="1"
+                    android:prompt="@string/spinner_prompt"
+                    tools:listitem="@android:layout/simple_spinner_item" />
+
+                <Button
+                    android:id="@+id/buttonSearch"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#FFFFFF"
+                    android:enabled="false"
+                    android:insetTop="0dp"
+                    android:minWidth="10dp"
+                    android:minHeight="10dp"
+                    android:onClick="showResult"
+                    app:icon="@android:drawable/ic_menu_search"
+                    app:iconTint="#000000" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Results:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinator_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

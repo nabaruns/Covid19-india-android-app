@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--    <data>-->
+
+<!--        <variable-->
+<!--            name="itemData"-->
+<!--            type="com.nabarunsarkar.covid19notify.model.TotalDetails" />-->
+<!--    </data>-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/view_background"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="#8b8686">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/delete_icon"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:contentDescription="@string/app_name"-->
+<!--                    android:src="@drawable/ic_stat_notification_icon"-->
+<!--                    android:visibility="invisible" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_toStartOf="@id/delete_icon"-->
+<!--                    android:text="Click for more"-->
+<!--                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+<!--                    android:textColor="#000000" />-->
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/view_foreground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:visibility="gone"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/image"
+                    android:ellipsize="end"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="#3b3b3b"
+                    tools:text="Titles" />
+
+                <TextView
+                    android:id="@+id/sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_toEndOf="@id/image"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:text="ST"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="#787878"
+                    tools:text="ST" />
+
+<!--                <RatingBar-->
+<!--                    android:id="@+id/rating_bar"-->
+<!--                    style="?android:attr/ratingBarStyleSmall"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentStart="true"-->
+<!--                    android:layout_below="@+id/sub_title"-->
+<!--                    android:layout_margin="4dp"-->
+<!--                    android:numStars="5"-->
+<!--                    android:rating="4"-->
+<!--                    android:stepSize="1" />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/date_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sub_title"
+                    android:padding="4dp"
+                    android:stepSize="1"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="#bebbbb"
+                    tools:text="Date : 12-12-2017" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout02"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_text"
+                    android:layout_width="match_parent">
+
+                    <Button
+                        android:id="@+id/ButtonConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#fae0e2"
+                        android:enabled="false"
+                        android:text="0"
+                        android:textColor="#ff073a" />
+
+                    <Button
+                        android:id="@+id/ButtonActive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#f0f6fe"
+                        android:enabled="false"
+                        android:text="0"
+                        android:textColor="#007bff" />
+
+                    <Button
+                        android:id="@+id/ButtonRecovered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#e3f3e6"
+                        android:enabled="false"
+                        android:text="0"
+                        android:textColor="#28a745" />
+
+                    <Button
+                        android:id="@+id/ButtonDeath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#F6F6F7"
+                        android:enabled="false"
+                        android:text="0"
+                        android:textColor="#6c757d" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LinearLayout02"
+                    android:padding="8dp"
+                    android:text="@string/rowDescText"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/image"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:tint="@color/black"-->
+<!--                    android:layout_alignParentEnd="true" />-->
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/date_text"
+                    android:layout_alignEnd="@id/title"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+            </RelativeLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

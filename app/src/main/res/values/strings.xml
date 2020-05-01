@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Safe19 India</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="active">Active</string>
+    <string name="recovered">Recovered</string>
+    <string name="deaths">Deaths</string>
+
+    <string name="butonMain">Analysis &amp; State wise details</string>
+    <string name="stateText">State wise count:</string>
+
+    <string name="default_notification_channel_id">default</string>
+    <string name="notification_title">Count (India)</string>
+    <string name="notification_message">Confirmed Count : %s</string>
+    <string name="rowDescText">Description.</string>
+    <string name="about">About</string>
+    <string name="btnEssentialText"><![CDATA[Essentials & test centers]]></string>
+    <string name="important_governemnt_apps"><![CDATA[Important apps & resources]]></string>
+    <string name="important_facts">Important Facts</string>
+
+
+
+    <string name="spinner_prompt">Choose an item</string>
+    <string name="simple_header">State / UT</string>
+    <string name="dynamic_list_header">City / Town</string>
+    <string name="selection_header">Services</string>
+</resources>
